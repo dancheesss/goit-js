@@ -1873,19 +1873,31 @@ console.log(names)
 
 // eyes
 function eyeColor(color) {
-    let searchingPeople = people.filter(element => element.eyeColor === color)
-    return searchingPeople.map(element => element.name)
+    return people.filter(element => element.eyeColor === color).map(element => element.name)
 }
 
-console.log(eyeColor('brown'))
+console.log('brown color have:', eyeColor('brown'))
 
 // genders
 
 function findGender(gender) {
-    let searchingPeople = people.filter(element => element.gender === gender)
-    return searchingPeople.map(element => element.name)
+    return people.filter(element => element.gender === gender).map(element => element.name)
 }
 
-console.log(findGender('male'))
+console.log('gender is male:', findGender('male'))
+
 
 // isnt active
+function findIsntActive() {
+    return people.filter(element => element.isActive === false)
+}
+
+console.log("isn't active" ,findIsntActive())
+
+// email
+
+function findEmail(email) {
+    return people.filter(element => element.email === email).map(element => element.name)
+}
+
+console.log('email is shereeanthony@kog.com:', findEmail('shereeanthony@kog.com'))
